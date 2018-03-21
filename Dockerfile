@@ -7,7 +7,8 @@ RUN apk add --no-cache --virtual .persistent-deps \
     imagemagick \
     c-client \
     libsasl \
-    libldap
+    libldap \
+    grep
 
 ENV APCU_VERSION 5.1.8
 
