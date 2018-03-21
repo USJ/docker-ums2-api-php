@@ -44,5 +44,7 @@ RUN set -xe \
 COPY docker-entrypoint.sh /usr/local/bin/docker-app-entrypoint
 RUN chmod +x /usr/local/bin/docker-app-entrypoint
 
+COPY php.ini /usr/local/etc/php/php.ini
+
 ENTRYPOINT ["docker-app-entrypoint"]
 CMD ["php-fpm"]
