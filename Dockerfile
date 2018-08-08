@@ -26,6 +26,7 @@ RUN set -xe \
     && docker-php-ext-install \
     intl \
     pdo_mysql \
+    pdo_pgsql \
     zip \
     bcmath \
     imap \
@@ -35,7 +36,6 @@ RUN set -xe \
     mongodb \
     redis \
     imagick \
-    pdo_pgsql \
     && docker-php-ext-enable --ini-name 20-apcu.ini apcu \
     && docker-php-ext-enable --ini-name 05-opcache.ini opcache \
     && docker-php-ext-enable redis \
