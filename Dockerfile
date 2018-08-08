@@ -23,7 +23,7 @@ RUN set -xe \
     imagemagick-dev \
     libtool \
     openldap-dev \
-    libpq-dev \
+    postgresql-dev \
     && docker-php-ext-install \
     intl \
     pdo_mysql \
