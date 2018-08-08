@@ -19,7 +19,6 @@ RUN set -xe \
     zlib-dev \
     imap-dev \
     pkgconf \
-    openssl-dev \
     imagemagick-dev \
     libtool \
     openldap-dev \
