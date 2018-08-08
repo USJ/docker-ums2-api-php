@@ -23,6 +23,7 @@ RUN set -xe \
     imagemagick-dev \
     libtool \
     openldap-dev \
+    libpq-dev \
     && docker-php-ext-install \
     intl \
     pdo_mysql \
@@ -35,6 +36,7 @@ RUN set -xe \
     mongodb \
     redis \
     imagick \
+    pdo_pgsql \
     && docker-php-ext-enable --ini-name 20-apcu.ini apcu \
     && docker-php-ext-enable --ini-name 05-opcache.ini opcache \
     && docker-php-ext-enable redis \
