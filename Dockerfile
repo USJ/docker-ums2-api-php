@@ -8,6 +8,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
     c-client \
     libsasl \
     libldap \
+    libpq \
     grep
 
 ENV APCU_VERSION 5.1.8
