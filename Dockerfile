@@ -21,7 +21,7 @@ RUN set -xe \
     imap-dev \
     pkgconf \
     imagemagick-dev \
-    libressl-dev==2.6.5 \
+    libressl-dev~=2.6.5 \
     libtool \
     openldap-dev \
     postgresql-dev \
