@@ -43,7 +43,7 @@ RUN set -xe \
     && docker-php-ext-enable --ini-name 07-imap.ini imap \
     && docker-php-ext-enable ldap \
     && pecl download mongodb && mv mongodb-1.5.2.tgz /tmp/mongodb-1.5.2.tgz && tar xvzf /tmp/mongodb-1.5.2.tgz && curl -fsSL 'https://patch-diff.githubusercontent.com/raw/mongodb/mongo-c-driver/pull/526.patch' -o /tmp/526.patch \
-    && git apply --directory /tmp/mongodb-1.5.2 /tmp/526.patch && docker-php-ext-configure /tmp/mongodb-1.5.2 && docker-php-ext-install /tmp/mongodb-1.5.2 && rm -rf /tmp/mongodb-1.5.2 && rm -rf /tmp/526.patch \
+    && git apply --directory /tmp/mongodb-1.5.2/src/libmongoc /tmp/526.patch && docker-php-ext-configure /tmp/mongodb-1.5.2 && docker-php-ext-install /tmp/mongodb-1.5.2 && rm -rf /tmp/mongodb-1.5.2 && rm -rf /tmp/526.patch \
     && apk del .build-deps
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-app-entrypoint
