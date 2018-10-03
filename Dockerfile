@@ -28,3 +28,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY php.ini /usr/local/etc/php/php.ini
 
+WORKDIR /srv/project
