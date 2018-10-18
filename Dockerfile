@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     docker-php-ext-enable --ini-name 06-imagick.ini imagick && \
     docker-php-ext-enable --ini-name 07-imap.ini imap && \
     docker-php-ext-enable ldap && \
+    docker-php-ext-enable xdebug && \
     pecl download mongodb-1.5.2 && tar xvzf mongodb-1.5.2.tgz -C /tmp && rm -rf mongodb-1.5.2.tgz && curl -fsSL 'https://patch-diff.githubusercontent.com/raw/mongodb/mongo-c-driver/pull/526.patch' -o /tmp/526.patch && \
     cd /tmp/mongodb-1.5.2 && git apply --directory=src/libmongoc /tmp/526.patch && cd - && docker-php-ext-configure /tmp/mongodb-1.5.2 && docker-php-ext-install /tmp/mongodb-1.5.2 && rm -rf /tmp/mongodb-1.5.2 /tmp/526.patch && \
     rm -rf /var/lib/apt/lists/*
