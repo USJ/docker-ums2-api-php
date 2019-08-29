@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git && \
     rm -rf /var/lib/apt/lists/*
 
-ENV BUILD_DEPS libmongoc-dev libc-client-dev libpq-dev libldap-dev zlib1g-dev libicu-dev libkrb5-dev libgcrypt11-dev libmagickwand-dev libcurl4-openssl-dev pkg-config libssl-dev librabbitmq-dev
+ENV BUILD_DEPS libmongoc-dev libc-client-dev libpq-dev libldap-dev zlib1g-dev libicu-dev libkrb5-dev libgcrypt20-dev libmagickwand-dev libcurl4-openssl-dev pkg-config libssl-dev librabbitmq-dev
 
 ENV APCU_VERSION 5.1.8
 ENV MONGODB_DRIVER_VERSION 1.5.3
