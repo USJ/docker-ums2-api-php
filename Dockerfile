@@ -15,7 +15,7 @@ ENV MONGODB_DRIVER_VERSION 1.5.3
 RUN apt-get update && apt-get install -y --no-install-recommends \
     $BUILD_DEPS && \
     docker-php-ext-configure imap --with-kerberos --with-imap-ssl  && \
-    docker-php-ext-install intl pdo_mysql pdo_pgsql zip bcmath ldap imap sockets && \
+    docker-php-ext-install intl pdo_mysql pdo_pgsql zip bcmath ldap imap sockets gd && \
     pecl install apcu-${APCU_VERSION} redis imagick mongodb-${MONGODB_DRIVER_VERSION} amqp && \
     docker-php-ext-enable --ini-name 20-apcu.ini apcu && \
     docker-php-ext-enable --ini-name 05-opcache.ini opcache && \
