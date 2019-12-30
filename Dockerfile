@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.3-apache
 
 ENV PERSISTENT_DEPS libmongoc-1.0-0 libpq5 libldap-common zlib1g libicu57
 
@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV BUILD_DEPS libmongoc-dev libc-client-dev libpq-dev libldap-dev zlib1g-dev libicu-dev libkrb5-dev libgcrypt11-dev libmagickwand-dev
 
-ENV APCU_VERSION 5.1.8
-ENV XDEBUG_VERSION 2.6.0
+ENV APCU_VERSION 5.1.18
+ENV XDEBUG_VERSION 2.9.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     $BUILD_DEPS && \
