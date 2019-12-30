@@ -1,6 +1,6 @@
 FROM php:7.3-apache
 
-ENV PERSISTENT_DEPS libmongoc-1.0-0 libpq5 libldap-common zlib1g libicu63
+ENV PERSISTENT_DEPS libmongoc-1.0-0 libpq5 libldap-common zlib1g libicu63 libzip
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     $PERSISTENT_DEPS \
